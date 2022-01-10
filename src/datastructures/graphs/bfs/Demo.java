@@ -1,5 +1,7 @@
 package datastructures.graphs.bfs;
 
+import datastructures.graphs.bfs.Node;
+
 public class Demo {
     public static void main(String[] args) {
         Graph graph = new Graph(false);

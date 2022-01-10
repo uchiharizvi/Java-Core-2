@@ -1,54 +1,68 @@
 package datastructures.graphs.dfs;
 
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Graph {
-    private int V;//Number of vertices
-    private LinkedList<Integer> adj[];//Array  of lists fo Adjacency List Representation
+    private HashMap<Node, LinkedList<Node>> adjacencyMap;
+    private boolean directed;
 
-    // Constructor
-    @SuppressWarnings("unchecked")
-    Graph(int v) {
-        V = v;
-        adj = new LinkedList[v];
-        for (int i = 0; i < v; ++i) {
-            adj[i] = new LinkedList();
+    public Graph(boolean directed) {
+        this.directed = directed;
+        adjacencyMap = new HashMap<>();
+    }
+
+    public void addEdge(Node source, Node destination) {
+
+        // We make sure that every used node shows up in our .keySet()
+        if (!adjacencyMap.keySet().contains(source))
+            adjacencyMap.put(source, null);
+        if (!adjacencyMap.keySet().contains(destination))
+            adjacencyMap.put(destination, null);
+        addEdgeHelper(source, destination);
+        // If a graph is undirected, we want to add an edge from destination to source as well
+        if (!directed) {
+            addEdgeHelper(destination, source);
         }
     }
 
-    // Function to add an edge into the graph
-    void addEdge(int v, int w) {
-        adj[v].add(w);
+    public void addEdgeHelper(Node a, Node b) {
+        LinkedList<Node> tmp = adjacencyMap.get(a);
+
+        if (tmp != null) {
+            tmp.remove(b);
+        } else tmp = new LinkedList<>();
+        tmp.add(b);
+        adjacencyMap.put(a, tmp);
     }
 
-    // A function used by DFS
-    void dfsUtil(int v, boolean visited[]) {
-        // Mark the current node as visited and print it
-        visited[v] = true;
-        System.out.println(v + " ");
-        // Recur for all the vertices adjacent to this vertex
-        Iterator<Integer> i = adj[v].listIterator();
-        while (i.hasNext()) {
-            int n = i.next();
-            if (!visited[n]) dfsUtil(n, visited);
+    public void printEdges() {
+        for (Node node : adjacencyMap.keySet()) {
+            System.out.print("The " + node.name + " has an edge towards: ");
+            for (Node neighbor : adjacencyMap.get(node)) {
+                System.out.print(neighbor.name + " ");
+            }
+            System.out.println();
         }
     }
 
-    //The function to do DFS traversal It uses recursive DFSUtil()
-    void dfs(int v) {
-        //Mark all the vertices as not visited(set as false by default in java)
-        boolean visited[] = new boolean[V];
-        // Call the recursive helper function to print DFS traversal
-        dfsUtil(v, visited);
+    public boolean hasEdge(Node source, Node destination) {
+        return adjacencyMap.containsKey(source) && adjacencyMap.get(source).contains(destination);
     }
 
-    void dfs() {
-        //Mark all the vertices as not visited(set as false by default in java)
-        boolean visited[] = new boolean[V];
-        // Call the recursive helper function to print DFS traversal
-        for (int i = 0; i < V; ++i)
-            if (visited[i] == false)
-                dfsUtil(i, visited);
+    public void resetNodesVisited() {
+        for (Node node : adjacencyMap.keySet()) {
+            node.unvisit();
+        }
+    }
+
+    public void depthFirstSearch(Node node) {
+        node.visit();
+        System.out.print(node.name + " ");
+        LinkedList<Node> allNeighbors = adjacencyMap.get(node);
+        if (allNeighbors == null) return;
+        for (Node neighbor : allNeighbors) {
+            if (!neighbor.visited) depthFirstSearch(neighbor);
+        }
     }
 }
