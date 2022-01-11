@@ -3,6 +3,7 @@ package datastructures.trees.binarytree.problems.levelorder.methodapproach;
 public class BinaryTree {
     Node root;
 
+
     public BinaryTree() {root = null;}
 
     public void printLevelOrder(){

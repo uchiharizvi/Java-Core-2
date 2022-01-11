@@ -49,8 +49,8 @@ public class BinarySearchTree {
 
     private void postOrderTraverse(Node root) {
         if (root != null) {
-            preOrderTraverse(root.left);
-            preOrderTraverse(root.right);
+            postOrderTraverse(root.left);
+            postOrderTraverse(root.right);
             System.out.println(root.key);
         }
     }
