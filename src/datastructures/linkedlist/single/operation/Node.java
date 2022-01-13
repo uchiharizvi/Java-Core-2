@@ -1,4 +1,4 @@
-package datastructures.linkedlist.single.operation.insertion;
+package datastructures.linkedlist.single.operation;
 
 public class Node {
     int data;
