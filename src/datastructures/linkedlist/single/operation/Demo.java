@@ -9,5 +9,8 @@ public class Demo {
         llist.append(4);
         llist.insertAfter(llist.head.next, 8);
         llist.printList();
+        System.out.println("");
+        llist.deleteNodeAtPosition(2);
+        llist.printList();
     }
 }
