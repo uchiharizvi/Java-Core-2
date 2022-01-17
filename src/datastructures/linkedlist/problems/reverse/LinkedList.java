@@ -22,6 +22,22 @@ public class LinkedList {
         head = previous;
         return head;
     }
+    public void reversePrint(Node head) {
+        Node current = head;
+        Node previous = null;
+        Node next = null;
+        while(current!=null){
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        head = previous;
+        while(head!=null){
+            System.out.println(head.data + " ");
+            head = head.next;
+        }
+    }
 
     public void print(Node node) {
         while (node != null) {

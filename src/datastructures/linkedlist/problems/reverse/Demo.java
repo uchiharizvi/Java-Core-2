@@ -10,6 +10,7 @@ public class Demo {
         System.out.println("Linked List : ");
         list.print(list.head);
         System.out.println("Reverse List : ");
+        list.reversePrint(list.head);
         list.head = list.reverse(list.head);
         list.print(list.head);
 
