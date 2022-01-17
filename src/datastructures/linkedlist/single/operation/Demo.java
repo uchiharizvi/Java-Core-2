@@ -12,5 +12,6 @@ public class Demo {
         System.out.println("");
         llist.deleteNodeAtPosition(2);
         llist.printList();
+        if(llist.search(llist.head,4)) System.out.println("Yes");
     }
 }

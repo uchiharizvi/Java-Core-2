@@ -74,6 +74,16 @@ public class LinkedList {
         previous.next = temp.next;//delete/unlink node
     }
 
+    public boolean search(Node head, int data) {
+
+        Node current = head;
+        while (current != null) {
+            if (current.data == data) return true;
+            current = current.next;
+        }
+        return false;
+    }
+
     public void printList() {
         Node n = head;
         while (n != null) {
