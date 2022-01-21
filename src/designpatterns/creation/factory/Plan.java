@@ -1,4 +1,4 @@
-package designpatterns.factory;
+package designpatterns.creation.factory;
 
 public abstract class Plan {
     protected double rate;

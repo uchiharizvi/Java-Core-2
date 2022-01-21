@@ -1,6 +1,4 @@
-package designpatterns.factory;
-
-import designpatterns.factory.Plan;
+package designpatterns.creation.factory;
 
 public class InstitutionalPlan extends Plan {
     @Override

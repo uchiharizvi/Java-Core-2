@@ -28,13 +28,21 @@ public class Stack_Demo {
     }
 
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<String> stack = new Stack<String>();
+        Stack stack1 = new Stack();
 
-        push(stack);
-        pop(stack);
-        push(stack);
-        peek(stack);
-        search(stack, 2);
-        search(stack, 6);
+        stack1.push(4);
+        stack1.push("All");
+        stack1.push("Geeks");
+
+        stack.push("Geeks");
+        stack.push("For");
+        stack.push("Geeks");
+
+        System.out.println(stack1);
+        System.out.println(stack);
+        stack.pop();
+        System.out.println(stack);
+
     }
 }

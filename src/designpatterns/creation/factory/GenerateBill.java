@@ -1,4 +1,4 @@
-package designpatterns.factory;
+package designpatterns.creation.factory;
 
 import java.io.BufferedReader;
 import java.io.IOException;

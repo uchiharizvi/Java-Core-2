@@ -1,9 +1,4 @@
-package designpatterns.factory;
-
-import designpatterns.factory.Plan;
-import designpatterns.factory.CommercialPlan;
-import designpatterns.factory.DomesticPlan;
-import designpatterns.factory.InstitutionalPlan;
+package designpatterns.creation.factory;
 
 public class GetPlanFactory {
     public Plan getPlan(String planType) {
