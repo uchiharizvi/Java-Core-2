@@ -1,4 +1,4 @@
-package efficiencyTechniques.recursion.fibonacii;
+package efficiencyTechniques.problems.fibonaciiSeries.recursion;
 
 public class Demo {
     public static void main(String[] args) {

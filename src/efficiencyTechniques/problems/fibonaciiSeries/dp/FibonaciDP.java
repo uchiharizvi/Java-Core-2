@@ -1,4 +1,4 @@
-package efficiencyTechniques.dp.fibonacii;
+package efficiencyTechniques.problems.fibonaciiSeries.dp;
 
 public class FibonaciDP {
     static int fib(int n) {

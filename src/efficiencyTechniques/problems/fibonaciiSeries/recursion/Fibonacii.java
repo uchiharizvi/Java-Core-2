@@ -1,4 +1,4 @@
-package efficiencyTechniques.recursion.fibonacii;
+package efficiencyTechniques.problems.fibonaciiSeries.recursion;
 
 public class Fibonacii {
     static int fib(int n) {

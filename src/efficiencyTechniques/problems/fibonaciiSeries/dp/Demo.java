@@ -1,6 +1,4 @@
-package efficiencyTechniques.dp.fibonacii;
-
-import efficiencyTechniques.recursion.fibonacii.Fibonacii;
+package efficiencyTechniques.problems.fibonaciiSeries.dp;
 
 public class Demo {
     public static void main(String[] args) {
