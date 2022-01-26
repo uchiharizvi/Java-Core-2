@@ -1,32 +1,66 @@
 package problems.leetcode.ds.easy.arrays;
 
+import java.util.Hashtable;
+
 public class TwoSum {
     public static void main(String[] args) {
-        int[] arr = {3, 2, 3};
-        int target = 6;
-        arr = twoSum(arr, target);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
+        int[] arr = {2, 7, 11, 15};
+        int target = 9;
+        for (int x : twoSum_Pointers(arr, target))
+            System.out.print(x + " ");
 
     }
 
-    public static int[] twoSum(int[] nums, int target) {
-        return calculateTwoSum(nums, 0, nums.length - 1, target);
+    /**
+     * Approach Hashing
+     **/
+    public static int[] twoSum_hashing(int[] nums, int target) {
+        Hashtable<Integer, Integer> hashtable = new Hashtable<>();
+        int[] pair = {};
+        Boolean foundPair = false;
+        int i = 0;
+        while (i < nums.length) {
+            hashtable.put(nums[i], i);
+            i++;
+        }
+        i = 0;
+        while (i < nums.length && !(foundPair)) {
+            int compliment = target - nums[i];
+            if (hashtable.contains(compliment)) {
+                if (i != hashtable.get(compliment)) {
+                    pair[i] = i;
+                    pair[i + 1] = hashtable.get(compliment);
+                    foundPair = true;
+                }
+            }
+            i++;
+        }
+        return pair;
     }
 
-    private static int[] calculateTwoSum(int[] nums, int start, int end, int target) {
-        int cur = 0;
-        int[] res = new int[2];
-        for (int i = start; i <= start + 1; i++) {
-            cur += nums[i];
+    /**
+     * Approach : Brute Force
+     * 48MS | 39.4 MB
+     * TC = O(N * N)
+     * SC = O(1)
+     **/
+    public static int[] twoSum_BF(int[] nums, int target) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) return new int[]{i, j};
+            }
         }
-        if (cur == target) {
-            res[0] = start;
-            res[1] = start + 1;
-        } else {
-            calculateTwoSum(nums, start + 1, end, target);
+        return new int[]{-1, -1};
+    }
+
+    public static int[] twoSum_Pointers(int[] nums, int target) {
+        int left = 0, right = nums.length - 1, tempSum;
+        while (left < right) {
+            tempSum = nums[left] + nums[right];
+            if (tempSum == target) return new int[]{left + 1, right + 1};
+            if (tempSum > target) right--;
+            else left++;
         }
-        return res;
+        return new int[]{-1, -1};
     }
 }

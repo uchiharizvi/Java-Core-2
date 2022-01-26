@@ -9,6 +9,9 @@ public class MergeSortedArray {
         merge(ar1, 5, ar2, 5);
     }
 
+    /**
+     * 4 MS | 40 MB
+     **/
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int j = 0;
         for (int i = m; i < m + n && j < n; i++) {
