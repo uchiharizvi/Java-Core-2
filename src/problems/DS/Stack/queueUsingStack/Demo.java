@@ -1,4 +1,4 @@
-package DS.stack.problems.queueUsingStack;
+package problems.DS.Stack.queueUsingStack;
 
 public class Demo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package DS.stack.problems.infixToPostfix;
+package problems.DS.Stack.infixToPostfix;
 
 public class StackOperation {
     public int precedence(char ch) {
