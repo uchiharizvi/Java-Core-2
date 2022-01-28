@@ -2,7 +2,7 @@ package problems.leetcode.ds.easy.arrays;
 
 import java.util.Arrays;
 
-public class MergeSortedArray {
+public class MergeSortedArray_88 {
     public static void main(String[] args) {
         int[] ar1 = {1, 3, 5, 7, 9};
         int[] ar2 = {2, 4, 6, 8, 10};

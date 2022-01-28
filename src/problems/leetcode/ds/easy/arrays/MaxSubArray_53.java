@@ -2,7 +2,7 @@ package problems.leetcode.ds.easy.arrays;
 
 import java.util.*;
 
-public class SubArray {
+public class MaxSubArray_53 {
     public static void main(String[] args) {
         Set<Integer> res = new TreeSet<>();
         int[] arr = {5, 4, -1, 7, 8};

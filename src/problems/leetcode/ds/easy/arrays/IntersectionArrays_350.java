@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class IntersectionArrays {
+public class IntersectionArrays_350 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 1};
         int[] arr2 = {2, 2};
