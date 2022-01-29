@@ -1,7 +1,12 @@
 package problems.leetcode.ds.easy.arrays;
 
 import java.util.*;
-
+/**
+ * Algorithm
+ * 1) For each element of array, add it into a set (get unique values)
+ * 2) compare set size with array length
+ * 3) if same return F else return T
+ * **/
 public class CheckDuplicates_217 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 3, 5, 6, 7};

@@ -48,16 +48,4 @@ public class Stock_121 {
         }
         return max;
     }
-    /**
-     * 6 ms
-     * 83.8 MB
-     **/
-    public static int maxProfit_DP(Vector<Integer>, int[] prices) {
-        int profit = 0, min_value = Integer.MAX_VALUE;
-        for (int i = 0; i < prices.length; i++) {
-            min_value = min(min_value, prices[i]);
-            profit = max(profit, prices[i] - min_value);
-        }
-        return profit;
-    }
 }

@@ -1,7 +1,13 @@
 package problems.leetcode.ds.easy.arrays;
 
 import java.util.Hashtable;
-
+/**Algorithm Brute Force method
+ * 1) loop i and j till array length , i=0, j= i+1
+ * 2) if arr[i][j] = target, return i,j
+ * 3) if no match found return -1,-1
+ *
+ *
+ * **/
 public class TwoSum_1 {
     public static void main(String[] args) {
         int[] arr = {2, 7, 11, 15};
