@@ -1,6 +1,6 @@
 package DS.stack;
 
-import java.util.*;
+import java.util.Stack;
 
 public class Stack_Demo {
     public static void push(Stack<Integer> stack) {
