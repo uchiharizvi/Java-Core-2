@@ -1,4 +1,4 @@
-package CPP.LeetCode.ds.easy.arrays;
+package CPP.LeetCode.ds.arrays.easy;
 
 public class SearchInsertPosition {
     public static void main(String[] args) {

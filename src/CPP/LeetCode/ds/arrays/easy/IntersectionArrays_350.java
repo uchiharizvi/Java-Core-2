@@ -1,4 +1,4 @@
-package CPP.LeetCode.ds.easy.arrays;
+package CPP.LeetCode.ds.arrays.easy;
 
 import java.util.Arrays;
 import java.util.HashMap;

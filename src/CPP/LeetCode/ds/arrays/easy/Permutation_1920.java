@@ -1,4 +1,4 @@
-package CPP.LeetCode.ds.easy.arrays;
+package CPP.LeetCode.ds.arrays.easy;
 
 /**
  * Problem : https://leetcode.com/problems/build-array-from-permutation/

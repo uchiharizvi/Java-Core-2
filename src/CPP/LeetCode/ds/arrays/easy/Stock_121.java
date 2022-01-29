@@ -1,4 +1,4 @@
-package CPP.LeetCode.ds.easy.arrays;
+package CPP.LeetCode.ds.arrays.easy;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;

@@ -1,4 +1,4 @@
-package CPP.LeetCode.ds.easy.countingBits;
+package CPP.LeetCode.ds.countingBits;
 
 public class CountBits {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package CPP.LeetCode.ds.easy.arrays;
+package CPP.LeetCode.ds.arrays.easy;
 
 public class ReshapeMatrix_566 {
     public static void main(String[] args) {
