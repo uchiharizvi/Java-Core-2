@@ -10,7 +10,6 @@ public class TwoStrings {
         int pairs = input.nextInt();
         input.nextLine();
 
-        tests:
         for (int t = 0; t < pairs; t++) {
             String a = input.nextLine();
             String b = input.nextLine();
