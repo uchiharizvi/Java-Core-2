@@ -1,7 +1,10 @@
+/*
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-/**Capgemani **/
+*/
+/**Capgemani **//*
+
 public class E {
     public static void main(String[] args) {
         //Q1 print odd numbers using Stream
@@ -25,3 +28,4 @@ public class E {
         }
     }
 }
+*/
