@@ -1,4 +1,4 @@
-package CPP.OptimizationProblems.Knapsack01;
+package CPP.OptimizationProblems;
 
 public class Knapsack_01 {
     public static void main(String[] args) {
