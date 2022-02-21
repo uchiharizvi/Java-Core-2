@@ -1,4 +1,4 @@
-package CPP.OptimizationProblems.Knapsack01;
+package CPP.OptimizationProblems;
 
 public class BinomialCoefficient {
     public static void main(String[] args) {
